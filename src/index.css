@@ -1,16 +1,29 @@
 @import './design-system/tokens.css';
 
+/*
+ * The page shell below is shared with ProjectHeader and the README page,
+ * so it keeps its original values. The design system is scoped to
+ * .project-page, the project's own content.
+ */
+
 html {
   scrollbar-width: thin;
-  scrollbar-color: var(--pt-ink-muted) transparent;
+  scrollbar-color: gray transparent;
 }
 
 html:root {
-  --project-bg: var(--pt-surface-100);
-  --project-fg: var(--pt-ink);
-  --project-muted-fg: var(--pt-ink-muted);
+  --project-bg: #fff;
   --background: var(--project-bg);
+  background: var(--project-bg);
+}
 
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--project-bg);
+}
+
+.project-page {
   /* Point @helenhsong/ui's shadcn theme at the design system tokens. */
   --foreground: var(--pt-ink);
   --card: var(--pt-surface-000);
@@ -27,21 +40,11 @@ html:root {
   --radius: 10px; /* ui derives --radius-md as 0.8x, giving --pt-radius-md (8px) */
 
   background: var(--project-bg);
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  background: var(--project-bg);
   color: var(--pt-ink);
   font: var(--pt-text-body);
 }
 
-:focus-visible {
+.project-page :focus-visible {
   outline: 2px solid var(--pt-brand);
   outline-offset: 2px;
-}
-
-.project-page {
-  background: var(--project-bg);
 }
