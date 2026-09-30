@@ -3,7 +3,8 @@
 /*
  * The page shell below is shared with ProjectHeader and the README page,
  * so it keeps its original values. The design system is scoped to
- * .project-page, the project's own content.
+ * .project-page, the project's own content; build it from the
+ * components in ./design-system/components.
  */
 
 html {
@@ -24,27 +25,7 @@ body {
 }
 
 .project-page {
-  /* Point @helenhsong/ui's shadcn theme at the design system tokens. */
-  --foreground: var(--pt-ink);
-  --card: var(--pt-surface-000);
-  --card-foreground: var(--pt-ink);
-  --popover: var(--pt-surface-000);
-  --popover-foreground: var(--pt-ink);
-  --primary: var(--pt-brand);
-  --primary-foreground: var(--pt-on-brand);
-  --muted-foreground: var(--pt-ink-muted);
-  --destructive: var(--pt-danger);
-  --border: var(--pt-border);
-  --input: var(--pt-ink-muted);
-  --ring: var(--pt-brand);
-  --radius: 10px; /* ui derives --radius-md as 0.8x, giving --pt-radius-md (8px) */
-
   background: var(--project-bg);
   color: var(--pt-ink);
   font: var(--pt-text-body);
-}
-
-.project-page :focus-visible {
-  outline: 2px solid var(--pt-brand);
-  outline-offset: 2px;
 }
