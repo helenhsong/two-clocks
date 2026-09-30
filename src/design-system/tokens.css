@@ -1,0 +1,92 @@
+/*
+ * Primetime design system tokens, from tokens.json beside this file
+ * (source: https://claude.ai/artifact/CkP7kkwW2hGr7LwKEsWeBs).
+ *
+ * Every variable is prefixed --pt- because the system's own names
+ * (--border, --accent, --radius-md, --font-sans) collide with the shadcn
+ * variables @helenhsong/ui reads.
+ */
+
+@font-face {
+  font-family: "Geist";
+  src: url("./fonts/Geist-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("./fonts/Geist-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Color */
+  --pt-surface-000: #ffffff; /* Cards, inputs, menus and anything raised above the page. */
+  --pt-surface-100: #f5f6f8; /* Page background. */
+  --pt-border: #d9dce3; /* Hairline dividers and card outlines only; use ink-muted for control borders. */
+  --pt-ink: #0d0f14; /* Primary text and icons on surface-000 and surface-100. */
+  --pt-ink-muted: #5a6070; /* Secondary text, captions, input borders, placeholders. */
+  --pt-brand: #1740ff; /* Primary buttons, links, focus rings, selected states. */
+  --pt-on-brand: #ffffff; /* Text and icons on brand fills. */
+  --pt-accent: #ff5a1f; /* Highlights, badges, "new"/"live" markers. Ink text on it; never text on white. */
+  --pt-success: #0f7a4a; /* Success text and icons on light surfaces. */
+  --pt-danger: #c8261e; /* Errors, destructive actions, validation text. */
+
+  /* Spacing */
+  --pt-space-1: 4px; /* Icon-to-label gaps, tight inline spacing. */
+  --pt-space-2: 8px; /* Gaps inside controls and between related items. */
+  --pt-space-4: 16px; /* Card and input padding, default stack gap. */
+  --pt-space-8: 32px; /* Section spacing and page gutters. */
+
+  /* Radius */
+  --pt-radius-sm: 4px; /* Badges, checkboxes, tags. */
+  --pt-radius-md: 8px; /* Buttons, inputs, cards. The default. */
+  --pt-radius-lg: 16px; /* Modals, large panels and media tiles. */
+
+  /* Type */
+  --pt-font-sans: Geist, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --pt-text-display: 500 56px/60px var(--pt-font-sans); /* Hero headlines, one per page. -0.02em */
+  --pt-text-heading-1: 500 36px/42px var(--pt-font-sans); /* Page titles. -0.015em */
+  --pt-text-heading-2: 500 24px/30px var(--pt-font-sans); /* Section titles and card headings. -0.01em */
+  --pt-text-body: 400 16px/24px var(--pt-font-sans); /* Default reading text. */
+  --pt-text-body-sm: 400 14px/20px var(--pt-font-sans); /* Dense UI, table cells, helper text. */
+  --pt-text-label: 600 13px/16px var(--pt-font-sans); /* Buttons, form labels, tabs. 0.01em */
+  --pt-text-caption: 500 12px/16px var(--pt-font-sans); /* Metadata, timestamps, footnotes. Use ink-muted. */
+}
+
+.pt-display {
+  font: var(--pt-text-display);
+  letter-spacing: -0.02em;
+}
+
+.pt-heading-1 {
+  font: var(--pt-text-heading-1);
+  letter-spacing: -0.015em;
+}
+
+.pt-heading-2 {
+  font: var(--pt-text-heading-2);
+  letter-spacing: -0.01em;
+}
+
+.pt-body {
+  font: var(--pt-text-body);
+}
+
+.pt-body-sm {
+  font: var(--pt-text-body-sm);
+}
+
+.pt-label {
+  font: var(--pt-text-label);
+  letter-spacing: 0.01em;
+}
+
+.pt-caption {
+  font: var(--pt-text-caption);
+  color: var(--pt-ink-muted);
+}

@@ -1,3 +1,12 @@
+@import './design-system/tokens.css';
+
+/*
+ * The page shell below is shared with ProjectHeader and the README page,
+ * so it keeps its original values. The design system is scoped to
+ * .project-page, the project's own content; build it from the
+ * components in ./design-system/components.
+ */
+
 html {
   scrollbar-width: thin;
   scrollbar-color: gray transparent;
@@ -17,4 +26,6 @@ body {
 
 .project-page {
   background: var(--project-bg);
+  color: var(--pt-ink);
+  font: var(--pt-text-body);
 }
