@@ -1,11 +1,31 @@
+@import './design-system/tokens.css';
+
 html {
   scrollbar-width: thin;
-  scrollbar-color: gray transparent;
+  scrollbar-color: var(--pt-ink-muted) transparent;
 }
 
 html:root {
-  --project-bg: #fff;
+  --project-bg: var(--pt-surface-100);
+  --project-fg: var(--pt-ink);
+  --project-muted-fg: var(--pt-ink-muted);
   --background: var(--project-bg);
+
+  /* Point @helenhsong/ui's shadcn theme at the design system tokens. */
+  --foreground: var(--pt-ink);
+  --card: var(--pt-surface-000);
+  --card-foreground: var(--pt-ink);
+  --popover: var(--pt-surface-000);
+  --popover-foreground: var(--pt-ink);
+  --primary: var(--pt-brand);
+  --primary-foreground: var(--pt-on-brand);
+  --muted-foreground: var(--pt-ink-muted);
+  --destructive: var(--pt-danger);
+  --border: var(--pt-border);
+  --input: var(--pt-ink-muted);
+  --ring: var(--pt-brand);
+  --radius: 10px; /* ui derives --radius-md as 0.8x, giving --pt-radius-md (8px) */
+
   background: var(--project-bg);
 }
 
@@ -13,6 +33,13 @@ body {
   margin: 0;
   min-height: 100vh;
   background: var(--project-bg);
+  color: var(--pt-ink);
+  font: var(--pt-text-body);
+}
+
+:focus-visible {
+  outline: 2px solid var(--pt-brand);
+  outline-offset: 2px;
 }
 
 .project-page {
